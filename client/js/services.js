@@ -1,6 +1,6 @@
 'use strict';
 
-var app = angular.module('userAuth');
+var app = angular.module('beerApp');
 
 app.service('UserService', function($http) {
 
