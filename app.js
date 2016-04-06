@@ -11,7 +11,7 @@ var chalk = require('chalk');
 var error = chalk.bold.red;
 
 var PORT = process.env.PORT || 3000;
-var mongoUrl = process.env.MONGOLAB_URI || 'mongodb://localhost/testapp';
+var mongoUrl = process.env.MONGOLAB_URI || 'mongodb://localhost/beerapp';
 
 if(!process.env.JWT_SECRET) {
   console.error(error(`ERROR:  Missing process.env.JWT_SECRET.
