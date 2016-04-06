@@ -1,6 +1,6 @@
 'use strict';
 
-var app = angular.module('testApp');
+var app = angular.module('beerApp');
 
 app.controller('navbarCtrl', function() {
 

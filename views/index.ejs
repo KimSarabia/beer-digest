@@ -13,8 +13,16 @@
 
     <script src='/js/bundle.js'></script>
 
+    <script src="/js/loginCtrl.js"></script>
+    <script src="/js/registerCtrl.js"></script>
+    <script src="/js/profileCtrl.js"></script>
+    <script src="/js/beerCtrl.js"></script>
+    <script src="/js/services/services.js"></script>
+
+
+
   </head>
-  <body ng-app='testApp'>
+  <body ng-app='beerApp'>
 
     <!-- Navbar -->
     <nav class="navbar navbar-default" ng-controller='navbarCtrl'>
@@ -30,7 +38,8 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-            <li><a ui-sref="home">Home</a></li>
+            <li><a ui-sref="login">Login</a></li>
+            <li><a ui-sref="dashboard">Dashboard</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
 
