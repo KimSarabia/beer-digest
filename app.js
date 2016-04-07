@@ -1,12 +1,17 @@
 'use strict';
 
-var express = require('express');
+var express = require('express'),
+  app = express();
+  require('dotenv').load();
 var http = require('http');
 var path = require('path');
+var favicon = require('serve-favicon');
 var bodyParser = require('body-parser');
 var cookieParser = require('cookie-parser');
+var bcrypt = require('bcryptjs');
 var logger = require('morgan');
 var mongoose = require('mongoose');
+var jwt = require('jwt-simple');
 var chalk = require('chalk');
 var error = chalk.bold.red;
 
@@ -22,8 +27,6 @@ mongoose.connect(mongoUrl, function(err){
   if(err) return console.error(`Error connecting to Mongodb: ${err}`);
   console.log(`Connected to MongoDB: ${mongoUrl}`);
 });
-
-var app = express();
 
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
